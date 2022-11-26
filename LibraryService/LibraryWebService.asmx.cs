@@ -49,6 +49,12 @@ namespace LibraryService
         }
 
         [WebMethod]
+        public Book GetBookById(string id)
+        {
+            return _libraryRepositoryService.GetById(id);
+        }
+
+        [WebMethod]
         public void AddBook(Book book)
         {
             _libraryRepositoryService.Add(book);
